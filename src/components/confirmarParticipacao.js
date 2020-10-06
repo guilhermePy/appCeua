@@ -18,7 +18,8 @@ class ConfirmarParticipacao extends Component {
        //projetos pendentes
       <View style={styles.container}>
             
-                
+            <Text style= {styles.ceua}>CEUA</Text>
+            <Text style= {styles.subtitulo}>COMITÊ DE ÉTICA NO USO DE ANIMAIS</Text>    
             
            
   
@@ -51,9 +52,9 @@ class ConfirmarParticipacao extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1, 
-    justifyContent: 'center', 
+    //justifyContent: 'center', 
     alignItems: 'center',
-    backgroundColor: '#2c3e50'
+    backgroundColor: '#fff'
   },
   input: {
     marginTop: 10, 
@@ -65,46 +66,64 @@ const styles = StyleSheet.create({
     borderRadius: 3
   }, 
   botao: {
-    width: 150,
+    width: 160,
     height: 42, 
     backgroundColor: '#ff0000',
     marginTop: 10,
     marginBottom: 10,
-    borderRadius: 4,
+    borderRadius: 8,
     alignItems: 'center',
     justifyContent: 'center'
   },
   botaoText: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: '#000'
+    color: '#000',
+    paddingBottom: 10,
+    marginLeft: 10
 
   },
   pickerComponent :{
       width: 300
   }, 
   projeto: {
+      padding: 12,
       width: 350,
       marginTop: 10,
-      backgroundColor: "#fff"
+      backgroundColor: "powderblue", 
+      borderRadius: 8
   },
   botaoProjeto: {
-    width: 150,
+    width: 160,
     height: 42, 
     backgroundColor:"#00ff00",
     marginTop: 10,
     marginBottom: 10,
     marginRight: 10,
-    borderRadius: 4,
+     borderRadius: 8,
     alignItems: 'center',
     justifyContent: 'center',
     padding: 10, 
   },
   espc: {
       
+      borderRadius: 8,
       flexDirection: "row",
-      justifyContent: 'center'
+      justifyContent: 'center',
+      padding: 8
       
+  }, 
+  ceua: {
+    paddingTop: 40,
+    fontSize: 30,
+    fontWeight: 'bold',
+
+  },
+  subtitulo: {
+    fontSize: 12,
+    
+    paddingBottom: 50
+
   }
  
 })

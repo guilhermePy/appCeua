@@ -14,7 +14,9 @@ class Index extends Component {
         
          //texto que será buscado da API
         <View style= {styles.container}>
-          <Text style= {styles.botaoText}>Texto que será retornado da api.</Text>
+          <Text style= {styles.botaoText}>CEUA</Text>
+          <Text style= {styles.subtitulo}>COMITÊ DE ÉTICA NO USO DE ANIMAIS</Text>
+
           </View>
 
       
@@ -27,9 +29,10 @@ class Index extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1, 
-    justifyContent: 'center', 
+   // justifyContent: 'center', 
     alignItems: 'center',
-    backgroundColor: '#2c3e50'
+    //backgroundColor: '#2c3e50'
+    backgroundColor: '#fff'
   },
   botao: {
     width: 300,
@@ -38,13 +41,17 @@ const styles = StyleSheet.create({
     marginTop: 10,
     borderRadius: 4,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'flex-start'
   },
   botaoText: {
-    fontSize: 16,
+    marginTop: 10,
+    justifyContent:'flex-start',
+    fontSize: 30,
     fontWeight: 'bold',
-    color: '#fff'
+    
 
+  }, subtitulo: {
+    fontSize: 12,
   }
 })
 export default Index;

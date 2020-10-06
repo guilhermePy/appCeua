@@ -19,7 +19,8 @@ class Login extends Component {
        //formulario de login
       <View style={styles.container}>
         
-       
+          <Text style= {styles.ceua}>CEUA</Text>
+          <Text style= {styles.subtitulo}>COMITÊ DE ÉTICA NO USO DE ANIMAIS</Text>
           <TextInput
             style={styles.input}
             placeholder="Digite seu e-mail."
@@ -45,15 +46,16 @@ class Login extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1, 
-    justifyContent: 'center', 
+    //justifyContent: 'center', 
     alignItems: 'center',
-    backgroundColor: '#2c3e50'
+    backgroundColor: '#fff'
   },
   input: {
+    justifyContent: 'center', 
     marginTop: 10, 
     padding: 10,
     width: 300, 
-    backgroundColor: '#fff',
+    backgroundColor: 'powderblue',
     fontSize: 16,
     fontWeight: 'bold',
     borderRadius: 3
@@ -65,12 +67,25 @@ const styles = StyleSheet.create({
     marginTop: 10,
     borderRadius: 4,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    
   },
   botaoText: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: '#fff'
+    color: 'white'
+
+  },
+  ceua: {
+    paddingTop: 40,
+    fontSize: 30,
+    fontWeight: 'bold',
+
+  },
+  subtitulo: {
+    fontSize: 12,
+    
+    paddingBottom: 50
 
   }
 })

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {
   View, Text, TouchableHighlight, StyleSheet, Linking
 } from 'react-native';
+//import MapView, {Marker} from "react-native-maps"
 
 import Incon from  'react-native-vector-icons/Ionicons'
 import msg from 'react-native-vector-icons/Entypo'
@@ -13,13 +14,20 @@ class Contato extends Component {
     render() {
       return (
         <View style={styles.container}>
+          
+          <Text style= {styles.ceua}>CEUA</Text>
+          <Text style= {styles.subtitulo}>COMITÊ DE ÉTICA NO USO DE ANIMAIS</Text>
          <View style={styles.localizacao}>
-            <msg.Button name="location-pin" size={25} backgroundColor="#2c3e50" />
-            <Text style={styles.botaoText}>localização</Text>
+            <msg.Button name="location-pin" size={25} backgroundColor="powderblue">
+              <Text style={styles.botaoText}>Localização</Text>
+            </msg.Button>
           </View>
+
         <View style={styles.localizacao}>
-        <tel.Button name="telephone" size={25} backgroundColor="#2c3e50" />
-        <Text style={styles.botaoText}>Telefone</Text>
+          <tel.Button name="telephone" size={25} backgroundColor="powderblue" >
+          <Text style={styles.botaoText}>Telefone</Text>
+          </tel.Button>
+        
         </View>
         
         </View>
@@ -31,9 +39,9 @@ class Contato extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1, 
-    justifyContent: 'center', 
+    //justifyContent: 'center', 
     alignItems: 'center',
-    backgroundColor: '#2c3e50'
+    backgroundColor: '#fff'
   },
   localizacao:{
     flexDirection:'row',
@@ -48,14 +56,29 @@ const styles = StyleSheet.create({
     height: 42, 
     backgroundColor: '#3498db',
     marginTop: 10,
-    borderRadius: 4,
+    borderRadius: 1,
     alignItems: 'center',
     justifyContent: 'center'
   },
   botaoText: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: '#fff'
+    color: '#fff', 
+    width: 300
+    
+    
+
+  },
+  ceua: {
+    paddingTop: 40,
+    fontSize: 30,
+    fontWeight: 'bold',
+
+  },
+  subtitulo: {
+    fontSize: 12,
+    
+    paddingBottom: 50
 
   }
 })

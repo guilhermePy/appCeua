@@ -19,6 +19,9 @@ class Projetos extends Component {
       return (
        //interação com meus projetos
       <View style={styles.container}>
+            <Text style= {styles.ceua}>CEUA</Text>
+          <Text style= {styles.subtitulo}>COMITÊ DE ÉTICA NO USO DE ANIMAIS</Text>
+
             <TouchableOpacity 
             style={styles.botao}
             >
@@ -48,12 +51,33 @@ class Projetos extends Component {
                 
             <Text style={styles.botaoText}>Titulo</Text>
             <Text style={styles.botaoText}>Situação</Text>
-            <View style={styles.espc}>
+            <View style={styles.espc2}>
+              <View style={styles.espc}>
                 <TouchableOpacity 
                 style={styles.botaoProjeto}
                 >
-                    <Text styles={styles.botaoText}>Ver projeto</Text>
+                    <Text styles={styles.botaoText}>Submeter</Text>
                 </TouchableOpacity>
+              
+               
+                <TouchableOpacity 
+                style={styles.botaoProjeto}
+                >
+                    <Text styles={styles.botaoText}>Declarações</Text>
+                </TouchableOpacity>
+                </View>
+                <View style={styles.espc}>
+                <TouchableOpacity 
+                style={styles.botaoProjeto}
+                >
+                    <Text styles={styles.botaoText}>Rel. Final</Text>
+                </TouchableOpacity>
+                <TouchableOpacity 
+                style={styles.botaoProjeto}
+                >
+                    <Text styles={styles.botaoText}>Rel. Parcial</Text>
+                </TouchableOpacity>
+                </View>
             </View>
           </View>
         
@@ -67,9 +91,9 @@ class Projetos extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1, 
-    justifyContent: 'center', 
+    //justifyContent: 'center', 
     alignItems: 'center',
-    backgroundColor: '#2c3e50'
+    backgroundColor: '#fff'
   },
   input: {
     marginTop: 10, 
@@ -78,7 +102,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     fontSize: 16,
     fontWeight: 'bold',
-    borderRadius: 3
+    borderRadius: 8
   }, 
   botao: {
     width: 300,
@@ -86,14 +110,15 @@ const styles = StyleSheet.create({
     backgroundColor: '#3498db',
     marginTop: 10,
     marginBottom: 10,
-    borderRadius: 4,
+    borderRadius: 8,
     alignItems: 'center',
     justifyContent: 'center'
   },
   botaoText: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: '#000'
+    color: 'white',
+    paddingBottom: 15
 
   },
   pickerComponent :{
@@ -106,18 +131,42 @@ const styles = StyleSheet.create({
       backgroundColor: "#fff"
   },
   botaoProjeto: {
-    width: 200,
+    padding: 5,
+    width: 150,
     height: 42, 
     backgroundColor: '#3498db',
-    marginTop: 10,
     marginBottom: 10,
-    borderRadius: 4,
+    margin: 4,
+    borderRadius: 8,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center', 
+    
   },
   espc: {
-      alignItems: 'center'
+      flexDirection: "row",
+      justifyContent: 'center',
+      
+      
+  },
+  espc2: {
+   
+    justifyContent: 'center', 
+    padding: 5
+  },
+  ceua: {
+    paddingTop: 40,
+    fontSize: 30,
+    fontWeight: 'bold',
+
+  },
+  subtitulo: {
+    fontSize: 12,
+   
+    paddingBottom: 50,
+    
+
   }
+  
  
 })
 export default Projetos;
